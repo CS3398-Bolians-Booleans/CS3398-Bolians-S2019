@@ -1,5 +1,5 @@
 # Predictive Automation Using Home Assistant
-> A plugin for Home Assitant that track users and their smart device usage while they go about their daily lives within their home. Our plugin will then use Machine Learning to automate tasks the user typically preforms by schedualing them within Home Assitant. 
+> A plugin for Home Assitant that track users and their smart device usage while they go about their daily lives within their home. Our plugin will then use Machine Learning to automate tasks the user typically preforms by scheduling them within Home Assitant. 
 
 ## Table of contents
 * [General info](#general-info)
@@ -12,7 +12,7 @@
 * [Contact](#contact)
 
 ## General info
-Our plugin will help non-technical users tackle home automation. Home assistant has tedious and diffucult to understand configuration processes for home automation. Our plugin simplifies the configuration process to be as minimal as possible. Our plugin will configure the schedualling of all smart devices in the home by tracking how the user normally utilizes them. The plugin then builds and maintains predictive scheduals for the devices.   
+Our plugin will help non-technical users tackle home automation. Home assistant has a tedious and diffucult to understand configuration processes for home automation. Our plugin simplifies the configuration process to be as minimal as possible. Our plugin will configure the scheduling of all smart devices in the home by tracking how the user normally utilizes them. The plugin then builds and maintains predictive schedules for the devices.   
 
 
 ## Screenshots
