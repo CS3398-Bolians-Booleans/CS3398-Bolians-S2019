@@ -3,19 +3,17 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
 Our plugin will help non-technical users tackle home automation. Home assistant has a tedious and diffucult to understand configuration processes for home automation. Our plugin simplifies the configuration process to be as minimal as possible. Our plugin will configure the scheduling of all smart devices in the home by tracking how the user normally utilizes them. The plugin then builds and maintains predictive schedules for the devices.   
 
 
-## Screenshots
+
+
 ![Example screenshot](./img/icon.png)
 
 ## Technologies
