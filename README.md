@@ -18,7 +18,7 @@ Our plugin will help non-technical users tackle home automation. Home assistant 
 
 ## Technologies
 * [Home Assistant](https://www.home-assistant.io/) - version 0.98.5
-* [Tensorflow](https://www.tensorflow.org/) - version 2.0
+* [Sci-kit Learn](https://scikit-learn.org/stable/) - version 0.21.2
 * [Rasberry pi - Model 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - Model B
 * [Google Maps API](https://developers.google.com/maps/documentation/)
 
