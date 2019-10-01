@@ -1,0 +1,46 @@
+# Example configuration.yaml entry
+cloud:
+config:
+
+
+# DEVICE TRACKING #############################################################
+# Derek Quiroz
+# 10/1/19
+
+#   Two options here:
+#   (Both will find new devices on the network)
+
+#       1) Through supported router gateway; need username/password
+#device_tracker:
+   #- platform: SUPPORTED_ROUTER e.g. netgear
+     #host: ROUTER_IP i.e. default gateway e.g. 192.168.1.1
+     #username: admin
+     #password: password
+     #interval_seconds: 10
+     #consider_home: 180
+     #new_device_defaults:
+       #track_new_devices: true
+
+#       2) Using Nmap; need to install on Pi - $ sudo apt-get install net-tools nmap
+#device_tracker:
+  - #platform: nmap_tracker
+    #hosts: ROUTER_IP/24
+    
+# Once a device_tracker is enabled, the known_devices.yaml will be created
+# In known_devices.yaml we can profile and track individual devices:
+
+#devicename:
+   #name: CUSTOM_NAME
+   #mac: MAC_ADDRESS
+   #picture: URL/PATH
+   #track: true i.e. location and state will be updated
+   #hide_if_away: false
+
+# END DEVICE TRACKING #########################################################
+
+
+media_player:
+  - platform: soundtouch
+    host: 192.168.1.1
+    port: 8090
+    name: Soundtouch Living Room
