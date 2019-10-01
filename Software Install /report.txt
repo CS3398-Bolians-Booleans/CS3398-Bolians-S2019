@@ -1,1 +1,0 @@
-I installed the Home Assassistant software onto a Raspberry Pi 3.
