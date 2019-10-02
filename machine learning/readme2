@@ -26,3 +26,6 @@ the 2nd tree with the current traffic/weather data. The only limitation of this 
 perioud for both of these trees. Solution? Track the user for 1 day. Then copy that data across 7 days. Then once 7 days
 has passed, copy that 7 days across 2 weeks in order. Then once 1 more week has passed, we have 2 weeks of data to use.
 Just use it.
+
+https://scikit-learn.org/stable/modules/preprocessing.html
+http://www.insightsbot.com/blog/McTKK/python-one-hot-encoding-with-scikit-learn
