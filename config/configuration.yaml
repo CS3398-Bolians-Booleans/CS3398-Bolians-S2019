@@ -38,6 +38,16 @@ config:
 
 # END DEVICE TRACKING #########################################################
 
+device_tracker:
+   - platform: asuswrt
+     host: 192.168.2.1
+     protocol: ssh
+     username: admin
+     password: hotelquaint712
+     interval_seconds: 10
+     consider_home: 180
+     new_device_defaults:
+       track_new_devices: true
 
 media_player:
   - platform: soundtouch
