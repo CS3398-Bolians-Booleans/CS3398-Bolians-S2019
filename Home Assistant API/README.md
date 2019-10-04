@@ -1,16 +1,12 @@
 # Definitions
-* Home Assistant - Home automation OS 
-* Integration - App that can interface with appliances like lights, coffee maker, change channel on TV, unlock door, etc
-* Predictive Home Automation (PHA) - Integration manage developed by Boolean Inc
+* [Home Assistant](https://www.home-assistant.io/hassio/) - Home automation OS 
+* [Integration](https://www.home-assistant.io/components/#search/light) - App that can interface with appliances like lights, coffee maker, change channel on TV, unlock door, etc
+* [PHA](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019) - Predictive Home Automation - Integration manager developed by Boolean Inc
 
 
 # Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Features](#features)
-* [Status](#status)
-* [Contact](#contact)
-
+* [Data In](#API-to-provide-data-to-PHA)
+* [Integrations](#technologies)
 
 # API to provide data to PHA
 
