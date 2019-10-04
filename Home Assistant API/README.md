@@ -28,9 +28,10 @@ https://developers.google.com/maps/documentation/directions/intro#sample-respons
 
 
 
-## Android Geofence (Very difficult: 13 points)
+## Android Geofence (Very difficult)
 https://developer.android.com/training/location/geofencing#java
 
+Nos sample response provided.
 
 ## Iphone location
 External API cannot access Iphone lcoation
