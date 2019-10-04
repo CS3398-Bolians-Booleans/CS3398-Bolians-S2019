@@ -15,23 +15,21 @@
 # API to provide data to PHA
 
 ## [Openweather](https://openweathermap.org/appid)
-https://openweathermap.org/appid
 
 Sample response: https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1
 
 
-## Google Maps
-https://developers.google.com/maps/documentation/directions/start
+## [Google Maps](https://developers.google.com/maps/documentation/directions/start)
+
 
 Sample response:
 https://developers.google.com/maps/documentation/directions/intro#sample-response
 
 
 
-## Android Geofence (Very difficult)
-https://developer.android.com/training/location/geofencing#java
+## [Android Geofence](https://developer.android.com/training/location/geofencing#java) (Very difficult)
 
-Nos sample response provided.
+No sample response provided.
 
 ## Iphone location
 External API cannot access Iphone lcoation
