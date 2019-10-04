@@ -14,7 +14,7 @@
 
 # API to provide data to PHA
 
-## [Openweather] (https://openweathermap.org/appid)
+## [Openweather](https://openweathermap.org/appid)
 https://openweathermap.org/appid
 
 Sample response: https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1
