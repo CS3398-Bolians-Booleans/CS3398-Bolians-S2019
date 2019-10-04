@@ -25,9 +25,9 @@ https://developers.google.com/maps/documentation/directions/intro#sample-respons
 
 ## [Android Geofence](https://developer.android.com/training/location/geofencing#java) (Very difficult)
 
-No sample response provided.
+Sample response: https://blog.bitsrc.io/how-to-perform-mobile-geolocation-testing-and-why-you-need-it-b391181e1d45
 
-## Iphone location
+## [Iphone location](https://developer.apple.com/documentation/corelocation/getting_the_user_s_location)
 External API cannot access Iphone lcoation
 
 
