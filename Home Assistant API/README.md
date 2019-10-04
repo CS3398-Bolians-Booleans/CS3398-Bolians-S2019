@@ -1,8 +1,10 @@
-# Predictive Automation Using Home Assistant
-> A plugin for Home Assitant that track users and their smart device usage while they go about their daily lives within their home. Our plugin will then use Machine Learning to automate tasks the user typically preforms by scheduling them within Home Assitant. 
+# Home Assistant API
 
-## Push Test
-How to be Ninja
+
+## Definitions
+* Home Assistant - Home automation OS 
+* Integration - App that can interface with appliances like lights, coffee maker, change channel on TV, unlock door, etc
+* Predictive Home Automation (PHA) - Integration manage developed by Boolean Inc
 
 
 ## Table of contents
