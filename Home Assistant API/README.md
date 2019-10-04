@@ -6,7 +6,7 @@
 
 # Table of contents
 * [Data In](#API-to-provide-data-to-PHA)
-* [Integrations](#technologies)
+* [Integrations](#Integrations)
 
 # API to provide data to PHA
 
