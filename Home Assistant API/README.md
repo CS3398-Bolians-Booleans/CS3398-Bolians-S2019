@@ -27,10 +27,21 @@ https://developers.google.com/maps/documentation/directions/intro#sample-respons
 
 Sample response: https://blog.bitsrc.io/how-to-perform-mobile-geolocation-testing-and-why-you-need-it-b391181e1d45
 
-## [Iphone location](https://developer.apple.com/documentation/corelocation/getting_the_user_s_location)
+## [Iphone location](https://apps.apple.com/us/app/home-assistant-open-source-home-automation/id1099568401)
 External API cannot access Iphone lcoation
 
 
 
 # Integrations
 https://www.home-assistant.io/components/#search/light
+
+
+# Integration Architectue
+
+
+
+
+Integration (PHA)
+Web UI (Hass)
+Backend (API)
+Hardware (Raspberry Pi)
