@@ -22,13 +22,14 @@ Sample response:
 https://developers.google.com/maps/documentation/directions/intro#sample-response
 
 
+## [Iphone location](https://apps.apple.com/us/app/home-assistant-open-source-home-automation/id1099568401)
 
-## [Android Geofence](https://developer.android.com/training/location/geofencing#java) (Very difficult)
+Home Assistant app can share geolocation on IOS
+
+
+## [Android Geofence](https://developer.android.com/training/location/geofencing#java) 
 
 Sample response: https://blog.bitsrc.io/how-to-perform-mobile-geolocation-testing-and-why-you-need-it-b391181e1d45
-
-## [Iphone location](https://apps.apple.com/us/app/home-assistant-open-source-home-automation/id1099568401)
-External API cannot access Iphone lcoation
 
 
 
@@ -39,9 +40,6 @@ https://www.home-assistant.io/components/#search/light
 # Integration Architectue
 
 
-
-
-Integration (PHA)
 Web UI (Hass)
-Backend (API)
+Backend (Flask) (Machine Learning) + Integration (PHA)
 Hardware (Raspberry Pi)
