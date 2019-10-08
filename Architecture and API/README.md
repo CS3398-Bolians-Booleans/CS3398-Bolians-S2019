@@ -1,13 +1,14 @@
+# Integration Architectue
+* Web UI (Hass.io)
+* Backend (Home Assistant integration) (Existing integrations) (scikit-learn, pandas) 
+* Hardware (Raspberry Pi)
+
+
 # Definitions
 * [Home Assistant](https://www.home-assistant.io/hassio/) - Home automation OS 
 * [Integration](https://www.home-assistant.io/components/#search/light) - App that can interface with appliances like lights, coffee maker, change channel on TV, unlock door, etc
 * [PHA](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019) - Predictive Home Automation - Integration manager developed by Boolean Inc
 
-# Integration Architectue
-
-* Web UI (Hass.io)
-* Backend (Flask) (scikit-learn, pandas) (Home Assistant integration)
-* Hardware (Raspberry Pi)
 
 # Table of contents
 * [Data In](#API-to-provide-data-to-PHA)
