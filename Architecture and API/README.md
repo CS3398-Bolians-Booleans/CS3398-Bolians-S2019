@@ -1,3 +1,9 @@
+# Integration Architectue
+* Web UI (Hass.io)
+* Backend (Home Assistant integration) (Existing integrations) (scikit-learn, pandas) 
+* Hardware (Raspberry Pi)
+
+
 # Definitions
 * [Home Assistant](https://www.home-assistant.io/hassio/) - Home automation OS 
 * [Integration](https://www.home-assistant.io/components/#search/light) - App that can interface with appliances like lights, coffee maker, change channel on TV, unlock door, etc
@@ -22,15 +28,17 @@ Sample response:
 https://developers.google.com/maps/documentation/directions/intro#sample-response
 
 
+## [Iphone location](https://apps.apple.com/us/app/home-assistant-open-source-home-automation/id1099568401)
 
-## [Android Geofence](https://developer.android.com/training/location/geofencing#java) (Very difficult)
+Home Assistant app can share geolocation on IOS
+
+
+## [Android Geofence](https://developer.android.com/training/location/geofencing#java) 
 
 Sample response: https://blog.bitsrc.io/how-to-perform-mobile-geolocation-testing-and-why-you-need-it-b391181e1d45
-
-## [Iphone location](https://developer.apple.com/documentation/corelocation/getting_the_user_s_location)
-External API cannot access Iphone lcoation
 
 
 
 # Integrations
 https://www.home-assistant.io/components/#search/light
+
