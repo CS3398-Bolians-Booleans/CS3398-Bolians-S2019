@@ -40,6 +40,6 @@ https://www.home-assistant.io/components/#search/light
 # Integration Architectue
 
 
-Web UI (Hass)
-Backend (Flask) (Machine Learning) + Integration (PHA)
-Hardware (Raspberry Pi)
+* Web UI (Hass.io)
+* Backend (Flask) (scikit-learn) (Home Assistant integration)
+* Hardware (Raspberry Pi)
