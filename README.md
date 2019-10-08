@@ -31,7 +31,14 @@ Our plugin will help non-technical users tackle home automation. Home assistant 
 
 ## Features
 List of features ready and TODOs for future development
-* We have a cool README.
+
+* Machine Learning Code Made - Shaun
+* Home Assitstant Server Set-Up - Stavros
+* Documentation of API and Integrations Made (Foundation for Flask API) - Sherwin
+* Created Initial Config for Device Tracking - Derek
+* Edited Config File to work with Basic Integration - UnFinished - Patrick
+
+
 
 To-do list:
 * Implement Machine Learning algorithm
@@ -40,6 +47,11 @@ To-do list:
 
 ## Status
 Project is: _in progress_ As it is still in the draft stage. 
+* Machine Learning Code Working, next step to integrate with plugin - Shaun
+* Hardware SetUp Complete, Add Additional Devices to Smart Network - Stavros
+* Researched APIs for real-time data, Complete a pipeline for real-time dat - Sherwin
+* Basic Plugin Completed, Build out functions for utilizing APIs, machine learning, and other plugins - Patrick
+* Logging complete, Next build out multiple user action tracking - Derek 
 
 [//]: <> (## Inspiration)
 [//]: <> (Add here credits. Project inspired by..., based on...)
