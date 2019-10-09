@@ -50,7 +50,7 @@ Project is: _in progress_ As it is still in the draft stage.
 * Machine Learning Code Working, next step to integrate with plugin - Shaun
 * Hardware SetUp Complete, Add Additional Devices to Smart Network - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
-* Basic Plugin Completed, Build out functions for utilizing APIs, machine learning, and other plugins - Patrick
+* [Basic Plugin Completed, Build out functions for utilizing APIs, machine learning, and other plugins](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/BasicPlugin%20-%20Scaffold) - Patrick
 * Logging complete, Next build out multiple user action tracking - Derek 
 
 ## Retrospective
