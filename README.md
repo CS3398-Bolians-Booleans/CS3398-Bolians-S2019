@@ -53,6 +53,33 @@ Project is: _in progress_ As it is still in the draft stage.
 * Basic Plugin Completed, Build out functions for utilizing APIs, machine learning, and other plugins - Patrick
 * Logging complete, Next build out multiple user action tracking - Derek 
 
+## Retrospective
+What Went Well or Maybe Not:
+* Regulary Scheduled Meetings
+* Maintained Frequent COmmunication
+* Underestimated Workload
+* Tasks Unclear
+* Assumed Tasks Would be Straight-Forward
+  * Shaun - Unclear in task assignment
+  * Patrick - Unclear in understanding of task assigned
+  * Sherwin - Unclear in task detail and implementation
+  * Stavros - Completed Entire Task
+  * Derek - Completed Task and assisted other group members
+
+
+What Might Be Impeding Us from Performing Better:
+* Lack of Familiarity and Experience With Home Assistant
+
+What Can We do to Improve:
+* In the future we will write out the plan by detailing out the expected results of the task, and how the task will be achieved.
+  * Shaun - Will be more clear in expectation of direction of project - measured by documentation of expectations
+  * Patrick - More frequent updates about progress of tasks-  measured by slack message progress reports
+  * Stavros - Communicate better with team members - as measureable by reaching out to individual members for updates
+  * Sherwin - Define tasks better - measureable with more detailed description
+  * Derek - Should have been more clear in tasks already accomplished to avoid overlap - as measureable with updates in slack and github
+  
+
+
 [//]: <> (## Inspiration)
 [//]: <> (Add here credits. Project inspired by..., based on...)
 
