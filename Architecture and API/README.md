@@ -1,6 +1,6 @@
 # Integration Architectue
 * Web UI (Hass.io)
-* Backend (Home Assistant integration)
+* Backend (Predictive Home Assistant)
   * Existing integrations 
   * scikit-learn, pandas 
 * Hardware (Raspberry Pi)
