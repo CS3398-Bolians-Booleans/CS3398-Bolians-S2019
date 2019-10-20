@@ -31,8 +31,8 @@ class DecisionTree:
     clf = DecisionTreeClassifier()
     col_names = ['user', 'location', 'action', 'time', 'date', 'weekday', 'holiday']
     # split dataset in features and target variable
-    feature_cols = ['time', 'holiday', 'action']
-    categorical_feature_cols = ['weekday']
+    feature_cols = ['time', 'holiday']
+    categorical_feature_cols = ['weekday', 'action']
     user_le = LabelEncoder()
     user_ohe = OneHotEncoder()
     location_le = LabelEncoder()
@@ -60,13 +60,35 @@ class DecisionTree:
     def train_and_validate(self, dataset):
         # load dataset
         data = pd.read_csv(dataset, header=None, names=self.col_names)
-        #X = data[self.categorical_feature_cols] # Features
-        #X = pd.concat([X, data[self.feature_cols]], axis=1)
-        X = data.filter(self.categorical_feature_cols, axis=1)
-        X_Other_Features = data.filter(self.feature_cols, axis=1)
-        X = pd.concat([X, X_Other_Features], axis=1)
-        X['time'] = pd.to_numeric(X['time'])
-        X['holiday'] = pd.to_numeric(X['holiday'])
+        data['time'] = pd.to_numeric(data['time'])
+        data['holiday'] = pd.to_numeric(data['holiday'])
+        data['action'] = self.action_le.fit_transform(data.action)
+        encoded_action = self.action_ohe.fit_transform(data.action.values.reshape(-1, 1)).toarray()
+        # dfOneHot = pd.DataFrame(encoded_action, columns=["action_" + str(int(i)) for i in range(X.shape[1])])
+        action_range = encoded_action.shape[1];
+        dfOneHot = pd.DataFrame(encoded_action,
+                                columns=["action_" + str(int(i)) for i in range(encoded_action.shape[1])])
+        data = data.drop('action', axis=1)
+        data = pd.concat([data, dfOneHot], axis=1)
+        data['weekday'] = self.weekday_le.fit_transform(data.weekday)
+        encoded_weekday = self.weekday_ohe.fit_transform(data.weekday.values.reshape(-1, 1)).toarray()
+        # dfOneHot = pd.DataFrame(encoded_weekday, columns=["weekday_" + str(int(i)) for i in range(X.shape[1])])
+        weekday_range = encoded_weekday.shape[1]
+        dfOneHot = pd.DataFrame(encoded_weekday,
+                                columns=["weekday_" + str(int(i)) for i in range(encoded_weekday.shape[1])])
+        data = data.drop('weekday', axis=1)
+        data = pd.concat([data, dfOneHot], axis=1)
+
+
+        X = data[self.feature_cols] # Features
+        for i in range(0, action_range):
+            X["action_" + str(int(i))] = data["action_" + str(int(i))]
+
+        for i in range(0, weekday_range):
+            X["weekday_" + str(int(i))] = data["weekday_" + str(int(i))]
+        ##X = data.filter(self.categorical_feature_cols, axis=1)
+        ##X_Other_Features = data.filter(self.feature_cols, axis=1)
+        ##X = pd.concat([X, X_Other_Features], axis=1)
         #X['user'] = self.user_le.fit_transform(X.user)
         #encoded_user = self.user_ohe.fit_transform(X.user.values.reshape(-1,1)).toarray()
         #dfOneHot = pd.DataFrame(encoded_user, columns=["user_" + str(int(i)) for i in range(X.shape[1])])
@@ -79,29 +101,21 @@ class DecisionTree:
         #dfOneHot = pd.DataFrame(encoded_location, columns=["location_" + str(int(i)) for i in range(encoded_location.shape[1])])
         #X.drop(['location'], axis=1)
         #X = pd.concat([X, dfOneHot], axis=1)
-        X['action'] = self.action_le.fit_transform(X.action)
-        encoded_action = self.action_ohe.fit_transform(X.action.values.reshape(-1, 1)).toarray()
-        #dfOneHot = pd.DataFrame(encoded_action, columns=["action_" + str(int(i)) for i in range(X.shape[1])])
-        dfOneHot = pd.DataFrame(encoded_action, columns=["action_" + str(int(i)) for i in range(encoded_action.shape[1])])
-        X = X.drop('action', axis=1)
-        X = pd.concat([X, dfOneHot], axis=1)
-        X['weekday'] = self.weekday_le.fit_transform(X.weekday)
-        encoded_weekday = self.weekday_ohe.fit_transform(X.weekday.values.reshape(-1, 1)).toarray()
-        #dfOneHot = pd.DataFrame(encoded_weekday, columns=["weekday_" + str(int(i)) for i in range(X.shape[1])])
-        dfOneHot = pd.DataFrame(encoded_weekday, columns=["weekday_" + str(int(i)) for i in range(encoded_weekday.shape[1])])
-        X = X.drop('weekday', axis=1)
-        X = pd.concat([X, dfOneHot], axis=1)
-        y = data.filter(['action', 'time'], axis=1) # Target variable
-        y['time'] = pd.to_numeric(y['time'])
+        y = data.filter(['time'], axis=1) # Target variable
         tempTime = y.at[0, 'time']
         i = 0;
         while (i < len(y.index) -1 ):
             y.at[i, 'time'] = y.at[i+1, 'time'] - y.at[i, 'time']
             i += 1
         y.at[i, 'time'] = tempTime - y.at[i, 'time']
-        tempAction = y.at[0, 'action']
-        y.action.shift(-1)
-        y.at[i, 'action'] = tempAction
+        yActions = pd.DataFrame()
+        tempActions = [0];
+        for i in range(0, action_range):
+            yActions["action_" + str(int(i))] = data["action_" + str(int(i))]
+            tempActions.append(yActions.at[0, "action_" + str(int(i))])
+        y.shift(-1)
+        for i in range(0, action_range):
+            yActions.at[len(yActions.index)-1, 'action_' + str(int(i))] = tempActions[i]
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=1)
         # Train Decision Tree Classifer
         self.clf = self.clf.fit(X_train,y_train)
