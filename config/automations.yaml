@@ -1,1 +1,25 @@
+# test automations to write to file
 
+automation statechange:
+  trigger:
+    - platform: state
+      entity_id: device_tracker.stavross_iphone
+      # from: "not_home"
+      # to: "home"
+      # ^ ANY state change if from/to are empty
+  action:
+    - service: notify.test_notifier
+      data:
+        message: 'state change for device_tracker.stavross_iphone'
+      
+      
+    
+automation timeinterval:
+  trigger:
+    - platform: time
+      minutes: '/1'
+      seconds: 00
+  action:
+    - service: notify.test_notifier
+      data:
+        message: 'automation timeinterval'
