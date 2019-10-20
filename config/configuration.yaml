@@ -10,8 +10,9 @@ python_script:
 notify:
   - name: test_notifier
     platform: file
-    filename: notifications
-
+    filename: notifications.txt
+    timestamp: true
+    
 http:
   api_password: admin
 
