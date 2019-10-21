@@ -1,25 +1,10 @@
-# test automations to write to file
-
-automation statechange:
+- id: '1571621139161'
+  alias: track_state_changes_stavross_iphone
   trigger:
-    - platform: state
-      entity_id: device_tracker.stavross_iphone
-      # from: "not_home"
-      # to: "home"
-      # ^ ANY state change if from/to are empty
+  - entity_id: device_tracker.stavross_iphone
+    platform: state
+  condition: []
   action:
-    - service: notify.test_notifier
-      data:
-        message: 'state change for device_tracker.stavross_iphone'
-      
-      
-    
-automation timeinterval:
-  trigger:
-    - platform: time
-      minutes: '/1'
-      seconds: 00
-  action:
-    - service: notify.test_notifier
-      data:
-        message: 'automation timeinterval'
+  - data_template:
+      message: '{{ trigger.to_state.state }}'
+    service: notify.notify_state_change
