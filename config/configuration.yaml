@@ -8,11 +8,13 @@ config:
 python_script:
 
 notify:
-  - name: test_notifier
+  - name: notify_state_change
     platform: file
-    filename: notifications.txt
+    filename: state_changes.txt
     timestamp: true
-    
+
+automation: !include automations.yaml
+
 http:
   api_password: admin
 
@@ -20,25 +22,18 @@ system_health:
 
 hello_world:
 
-
 # Google Maps component API
 sensor:
-
     # Use Google Map component
   - platform: google_travel_time
-    
     # Name of the sensor
     name: Travel Time
-    
     # TODO: generate API key
     api_key: AIzaSyAyDDKXONfTxf1Cj4I-oB1b3bE4ZIictgE
-    
     # Substitute with our tracker. Example: device_tracker.mobile_phone
     origin: Austin, Texas 
-    
     # Substitute with our home. Example: zone.home
     destination: San Marcos, Texas
-    
     # 'metric' for Metric, 'imperial' for Imperial
     options:
       units: imperial    
@@ -50,7 +45,6 @@ person:
     device_trackers:
       - device_tracker.Bolians
       
-
 asuswrt:
   host: 192.168.1.1
   username: admin  
@@ -63,10 +57,4 @@ device_tracker:
     consider_home: 180
     new_device_defaults:
       track_new_devices: true
-
-#Cannot test as of yet
-media_player:
-  - platform: soundtouch
-    host: 192.168.1.1
-    port: 8090
-    name: Soundtouch Living Room
+      
