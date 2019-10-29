@@ -54,6 +54,6 @@ datab.close()
 
 #make function to accept data from ML code and add to DB
 
-#take all the data from DB and turn it into panda shit.
+#take all the data from DB and turn it into panda dataframe.
 
 #get in contact with Derrick about scripts.
