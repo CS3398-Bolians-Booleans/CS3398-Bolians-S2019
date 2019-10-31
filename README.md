@@ -1,17 +1,16 @@
 # Predictive Automation Using Home Assistant
-> A plugin for Home Assitant that track users and their smart device usage while they go about their daily lives within their home. Our plugin will then use Machine Learning to automate tasks the user typically preforms by scheduling them within Home Assitant. 
+> A integration for Home Assitant that track users and their smart device usage while they go about their daily lives within their home. Our integration will then use Machine Learning to automate tasks the user typically preforms by scheduling them within Home Assitant. 
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Status](#status)
+* [Retrospective](#retrospective)
 * [Contact](#contact)
 
 ## General info
-Our plugin will help non-technical users tackle home automation. Home assistant has a tedious and diffucult to understand configuration processes for home automation. Our plugin simplifies the configuration process to be as minimal as possible. Our plugin will configure the scheduling of all smart devices in the home by tracking how the user normally utilizes them. The plugin then builds and maintains predictive schedules for the devices.   
-
-
+Our integration will help non-technical users tackle home automation. Home assistant has a tedious and diffucult to understand configuration processes for home automation. Our integration simplifies the configuration process to be as minimal as possible. Our integration will configure the scheduling of all smart devices in the home by tracking how the user normally utilizes them. The integration then builds and maintains predictive schedules for the devices.   
 
 
 ![Example screenshot](./img/icon.png)
@@ -32,51 +31,52 @@ Our plugin will help non-technical users tackle home automation. Home assistant 
 ## Features
 List of features ready and TODOs for future development
 
-* Machine Learning Code Made - Shaun
-* Home Assitstant Server Set-Up - Stavros
-* Documentation of API and Integrations Made (Foundation for Flask API) - Sherwin
-* Created Initial Config for Device Tracking - Derek
-* Edited Config File to work with Basic Integration - UnFinished - Patrick
+* Improved Accuracy of Machine Learning Code and corrected output- Shaun
+* Reworked Database and Management - Stavros
+* Integrating Google API for presence detection and travel time - Sherwin
+* Captured event triggers, and implemented machine learning output to Automation.yaml - Derek
+* Implement History and Recorder plugins to log actions in Database - Patrick
 
 
 
 To-do list:
-* Implement Machine Learning algorithm
-* Implement GPS and WiFi tracking
-* Build Home Assistant Plugin
+* Fix Home Assistant Integration Environment
+* Implement Automatic Triggering of all components
+* Improve Panda Data Frame
 
 ## Status
 Project is: _in progress_ As it is still not completely functional
 * [Machine Learning Code Working, next step to integrate with plugin](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/machine%20learning) - Shaun
 * Hardware SetUp Complete, Add Additional Devices to Smart Network - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
-* [Basic Plugin Completed, Build out functions for utilizing APIs, machine learning, and other plugins](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/BasicPlugin%20-%20Scaffold) - Patrick
+* [Implemented Lovelace UI, Integrated Logger and History Plugins for action tracking and storage of this data in database](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/BasicPlugin%20-%20Scaffold) - Patrick
 * [Logging complete, Next build out multiple user action tracking](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/user%20location) - Derek 
 
 ## Retrospective
 What Went Well or Maybe Not:
-* Regulary Scheduled Meetings
-* Maintained Frequent COmmunication
-* Underestimated Workload
-* Tasks Unclear
+* Still Attended Regulary Scheduled Meetings
+* Maintained Frequent Communication
+* All Code Compiles and Runs
+* Keep bigger picture in mind when assigning tasks
 * Assumed Tasks Would be Straight-Forward
-  * Shaun - Unclear in task assignment
-  * Patrick - Unclear in understanding of task assigned
-  * Sherwin - Unclear in task detail and implementation
-  * Stavros - Completed Entire Task
-  * Derek - Completed Task and assisted other group members
-
+  * Shaun - Achieved 95% accuracy on Machine Learning
+  * Patrick - Accurate Device tracking 
+  * Stavros - Database works well
+  * Sherwin - Excellent Positivity
+  * Derek - Action Scheduling went well
+     
 
 What Might Be Impeding Us from Performing Better:
 * Lack of Familiarity and Experience With Home Assistant
 
 What Can We do to Improve:
-* In the future we will write out the plan by detailing out the expected results of the task, and how the task will be achieved.
-  * Shaun - Will be more clear in expectation of direction of project - measured by documentation of expectations
-  * Patrick - More frequent updates about progress of tasks-  measured by slack message progress reports
-  * Stavros - Communicate better with team members - as measureable by reaching out to individual members for updates
-  * Sherwin - Define tasks better - measureable with more detailed description
-  * Derek - Should have been more clear in tasks already accomplished to avoid overlap - as measureable with updates in slack and github
+* Better endurance in meeting, and a higher understanding of Home Assistant Environment
+  * Shaun - Be more adaptable to change
+  * Patrick - Communicate lack of understanding at a more timely rate
+  * Sherwin - Take more initiative in implementing my work with the teams work
+  * Stavros - Be more insightful about planned work load
+  * Derek - Communicate my understanding of Home Assistant better
+  
   
 
 
