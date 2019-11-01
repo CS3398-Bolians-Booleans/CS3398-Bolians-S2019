@@ -79,8 +79,7 @@ http:
 system_health:
 
 hello_world:
-hello_state:
-  text: 'This is a Terrible Test -> Hello, World!'
+
 
 # Google Maps component API
 sensor:
