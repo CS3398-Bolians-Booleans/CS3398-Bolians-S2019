@@ -2,7 +2,7 @@
 
 #Currenly working
 cloud:
-
+zeroconf:
 config:
 
 python_script:
@@ -15,12 +15,72 @@ notify:
 
 automation: !include automations.yaml
 
+frontend: 
+  themes: !include themes.yaml
+
+default_config:
+
+logbook:
+  include:
+    domains:
+      - light
+      - device_tracker
+  exclude:
+    entities:
+      - 
+
+recorder:
+  include:
+    domains:
+      - light
+      - device_tracker
+      
+history:
+
+logger:
+  default: critical
+  logs:
+    # log level for HA core
+    homeassistant.core: fatal
+
+    # log level for MQTT integration
+    homeassistant.components.mqtt: warning
+
+    # log level for SmartThings lights
+    homeassistant.components.smartthings.light: info
+
+    # log level for a custom component
+    custom_components.hello_world: debug
+
+
+
+script:
+  add_logbook_entry:
+    alias: Add Logbook
+    sequence:
+      - service: logbook.log
+        data_template:
+          name: Stavros Bedside Table Light
+          message: is being used
+          # Optional
+          entity_id: light.bedside_table
+          domain: light
+      - service: logbook.log
+        data_template:
+          name: Stavros Iphone Left
+          message: is being used
+          # Optional
+          entity_id: device_tracker.stavross_iphone
+          domain: device_tracker
+
 http:
   api_password: admin
 
 system_health:
 
 hello_world:
+hello_state:
+  text: 'This is a Terrible Test -> Hello, World!'
 
 # Google Maps component API
 sensor:
@@ -44,7 +104,7 @@ person:
     id: 0e451b3ad26042a49fa7150252e930da
     device_trackers:
       - device_tracker.Bolians
-      
+
 asuswrt:
   host: 192.168.1.1
   username: admin  
@@ -57,4 +117,3 @@ device_tracker:
     consider_home: 180
     new_device_defaults:
       track_new_devices: true
-      
