@@ -47,7 +47,7 @@ To-do list:
 ## Status
 Project is: _in progress_ As it is still not completely functional
 * [Machine Learning Code Working, next step to integrate with plugin](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/machine%20learning) - Shaun
-* Hardware SetUp Complete, Add Additional Devices to Smart Network - Stavros
+* Hardware SetUp Complete, Add Additional Devices to Smart Network,created Database(https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Database) - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
 * [Implemented Lovelace UI, Integrated Logger and History Plugins for action tracking and storage of this data in database](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/BasicPlugin%20-%20Scaffold) - Patrick
 * [Logging complete, Next build out multiple user action tracking](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/user%20location) - Derek 
