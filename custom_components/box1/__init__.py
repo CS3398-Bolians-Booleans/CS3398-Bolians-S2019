@@ -39,7 +39,8 @@ def setup(hass, config):
         holiday = isHoliday()
         location = getStatus("stavrosIphone") #Derik or Patrick please check. This should return a 1 or 0 (integers) if stavroses Iphone is connected
         if (location == 0):
-            ETA = trafficAPI.getETA("homeAddress", "SchoolAddress") #Sherwin please check. This should return the amount of above average minutes for the commute
+			# getTraffic() returns the amount of above average seconds for the commute
+            ETA = Traffic.getTraffic("homeAddress", "SchoolAddress") 
             current_time = current_time + ETA
 
         action = event.event_type + event.gata #this is merging two data types. I don't know if it is necessary to string parse them
