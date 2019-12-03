@@ -16,7 +16,7 @@ def setup(hass, config):
     today = today.strftime("%d%m%Y")
 
     if (name == null || today - DB.getTrainDay() >= 7):
-         model.train_all('CSV_txt.txt')
+         model.train_all(DB.getData())
     else:
         model.load(name) #STAVROS CHECK HERE
 
