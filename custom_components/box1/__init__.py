@@ -131,12 +131,12 @@ def handle_event(event):
         ETA = Traffic.getTraffic("homeAddress", "SchoolAddress")
         current_time = current_time + ETA
 
-    action = event.event_type + event.gata #this is merging two data types. I don't know if it is necessary to string parse them
+    action = event.event_type + event.data 
     time,action = model.predict(user,action,today,current_time,location,holiday,weekday)
     write_to_automations(action, time)
     DB.save(user,action,today,current_time,location,holiday,weekday)
 
-# Listen for when example_component_my_cool_event is fired
-hass.bus.listen('example_component_my_cool_event', handle_event)
+# Listen for when example_component_my_cool_event is fired (example code for checking status of event. Disable for presentation)
+#hass.bus.listen('example_component_my_cool_event', handle_event)
 
 return True
