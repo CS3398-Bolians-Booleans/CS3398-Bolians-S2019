@@ -1,5 +1,6 @@
 DOMAIN = 'box1'
 from Tree import DecisionTree
+import DataBase as DB
 from Traffic import *
 from datetime import date
 from datetime import datetime
