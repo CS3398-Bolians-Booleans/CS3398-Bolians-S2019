@@ -1,5 +1,6 @@
 DOMAIN = 'box1'
 from Tree import DecisionTree
+from Traffic import *
 from datetime import date
 from datetime import datetime
 import pandas as pd
