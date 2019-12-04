@@ -44,7 +44,8 @@ To-do list:
 
 ## Status
 Project is: _Alpha_ As it is functioning but not published and contains limited features
-* [Machine Learning Code Working, next step to integrate with plugin](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/machine%20learning) - Shaun
+* [Demonstration Video](https://youtu.be/bm1OZir9xpg) - Team
+* [Integrated everything into the Integration to run as one single process](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/custom_components/box1/__init__.py) - Shaun
 * [Created Database to pass data into machine learning code, upgraded server](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/Database/app.py) - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
 * [Created write_to_automations.py which formats the machine learning tuple, and writes it to automations.yaml](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/config/python_scripts/write_to_automations.py%20-%20SuperUser%20and%20TAG)- Patrick
