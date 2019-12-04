@@ -35,7 +35,7 @@ List of features ready and TODOs for future development
 * Reworked Database and Management - Stavros
 * Integrating Google API for presence detection and travel time - Sherwin
 * Captured event triggers, and implemented machine learning output to Automation.yaml - Derek
-* Implement History and Recorder plugins to log actions in Database - Patrick
+* Created write_to_automations.py that will format and store machine learning generated automations - Patrick
 
 
 
@@ -47,7 +47,7 @@ Project is: _Alpha_ As it is functioning but not published and contains limited 
 * [Machine Learning Code Working, next step to integrate with plugin](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/machine%20learning) - Shaun
 * [Created Database to pass data into machine learning code, upgraded server](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/Database/app.py) - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
-* Implemented [Lovelace UI](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/lovelace), Integrated [Logger and History Plugins](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/config/configuration.yaml) for action tracking and storage of this data in database - Patrick
+* [Created write_to_automations.py which formats the machine learning tuple, and writes it to automations.yaml](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/blob/master/config/python_scripts/write_to_automations.py%20-%20SuperUser%20and%20TAG)- Patrick
 * [Logging complete, Next build out multiple user action tracking](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/user%20location) - Derek 
 
 ## Retrospective
