@@ -40,12 +40,10 @@ List of features ready and TODOs for future development
 
 
 To-do list:
-* Fix Home Assistant Integration Environment
-* Implement Automatic Triggering of all components
-* Improve Panda Data Frame
+ Study for final (no Sprint 4)
 
 ## Status
-Project is: _in progress_ As it is still not completely functional
+Project is: _Alpha_ As it is functioning but not published and contains limited features
 * [Machine Learning Code Working, next step to integrate with plugin](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/machine%20learning) - Shaun
 * [Hardware SetUp Complete, Add Additional Devices to Smart Network,created Database](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Database) - Stavros
 * [Created a Flask server to get real-time data. Next step is to create a pipeline for our integration to get real-time data](https://github.com/CS3398-Bolians-Booleans/CS3398-Bolians-S2019/tree/master/Architecture%20and%20API) - Sherwin
@@ -54,28 +52,28 @@ Project is: _in progress_ As it is still not completely functional
 
 ## Retrospective
 What Went Well or Maybe Not:
-* Still Attended Regulary Scheduled Meetings
-* Maintained Frequent Communication
-* All Code Compiles and Runs
-* Keep bigger picture in mind when assigning tasks
-* Assumed Tasks Would be Straight-Forward
-  * Shaun - Achieved 95% accuracy on Machine Learning
-  * Patrick - Accurate Device tracking 
-  * Stavros - Database works well
-  * Sherwin - Excellent Positivity
-  * Derek - Action Scheduling went well
+* Still Maintained Frequent Communication
+* All Code Integrated Together, Compiles, and Runs in the Home Assistant Environment
+* Still Attended Regulary Scheduled Meetings (including additional emergency meetings)
+* Downsized tasks for better assumed hours (most, at least)
+  * Shaun - Task hours were more than expected but I found the time
+  * Patrick - Fully accomplished goals in a timely manner
+  * Stavros - Rebuilt server multiple times after failures/crashes - got us running
+  * Sherwin - Finished Google Traffic API integration
+  * Derek - Automations actually execute!
      
 
 What Might Be Impeding Us from Performing Better:
-* Lack of Familiarity and Experience With Home Assistant
+* Complexity increased tremendously as more components were implemented. 
+* The Home Assistant environment we were working with seemed to be convoluted at times.
 
 What Can We do to Improve:
-* Better endurance in meeting, and a higher understanding of Home Assistant Environment
-  * Shaun - Be more adaptable to change
-  * Patrick - Communicate lack of understanding at a more timely rate
-  * Sherwin - Take more initiative in implementing my work with the teams work
-  * Stavros - Be more insightful about planned work load
-  * Derek - Communicate my understanding of Home Assistant better
+* Integrate code together in smaller pieces. Catch issues sooner.
+  * Shaun - Push smaller increments of code on github for team members to digest 
+  * Patrick - Reach out to team members more often to assist with work load
+  * Sherwin - Better unit testing
+  * Stavros - Be more proactive with security measures
+  * Derek - Schedule work and social life better to participate in more team meetings
   
   
 
