@@ -1,59 +1,53 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy 
-import pandas as pd
-import MySQLdb
-import pandas.io.sql as psql
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_admin.contrib.sqla import ModelView
+from flask_admin import Admin
+import pyodbc
 import os
 
 
 app = Flask(__name__)
-
+#
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
+# Database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.mysql')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 # Init db
 db = SQLAlchemy(app)
 
-#check if database exists
-#generate databaseq
+
+
 class MLData(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	user = db.Column(db.String(20))
-	address = db.Column(db.String(50))
-	action = db.Column(db.String(40))
-	timestamp = db.Column(db.String(40))
-	date = db.Column(db.String(40))
-	day = db.Column(db.String(40))
-	holiday=db.Column(db.String(40))
+    id = db.Column(db.Integer, primary_key=True)
+    user = db.Column(db.String(20))
+    location = db.Column(db.Integer)
+    action = db.Column(db.String(40))
+    timestamp = db.Column(db.String(40))
+    date = db.Column(db.String(40))
+    weekday = db.Column(db.String(40))
+    holiday=db.Column(db.String(40))
 
 
+def addData(user,location,action,timestamp,date,weekday,holiday):
+    entry = MLData(user=user,location=location,action=action,timestamp=timestamp,date=date,weekday=weekday,holiday=holiday)
+    db.session.add(entry)
+    db.session.commit()
 
-def addData(user,address,action,timestamp,date,day,holiday):
-	entry = MLData(user=user,address=address,action=action,timestamp=timestamp,date=date,day=day,holiday=holiday)
-	db.session.add(entry)
-	db.session.commit()	
-
-addData("Setev","1011 home","turn on light","10:34:35","10-24-30","Monday","0")
-
-
-
-
-
-# setup the database connection.  There's no need to setup cursors with pandas psql.
-datab=MySQLdb.connect(host=HOST, user=USER, passwd=PW, datab=db)
-
-# create the query
-query = "select * from TABLENAME"
-
-# execute the query and assign it to a pandas dataframe
-df = psql.read_sql(query, con=datab)
-# close the database connection
-datab.close()
+def getData():
+    conn = pyodbc.connect('Driver={SQL Server};'
+                      'Server= '+server +
+                      'Database=db.mysql;'
+                      'Trusted_Connection=yes;')
 
 
-
-#make function to accept data from ML code and add to DB
-
-#take all the data from DB and turn it into panda dataframe.
-
-#get in contact with Derrick about scripts.
+    SQL_Query = pd.read_sql_query(
+    '''select
+    user,
+    action,
+    date,
+    timestamp,
+    location,
+    holiday,
+    weekday
+    from MLData''', conn)
